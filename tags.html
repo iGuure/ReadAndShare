@@ -8,7 +8,7 @@
 	<title>用户中心</title>
 
 	<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/setting.css">
+	<link rel="stylesheet" type="text/css" href="css/tags.css">
 </head>
 <body>
 
@@ -53,98 +53,159 @@
         <!-- S= 标题 -->
         <div class="col-md-10 col-md-offset-1">
           <div class="page-header" id="title">
-            <h2>个人中心&nbsp;&nbsp;<small>User setting</small></h2>
+            <h2>选择感兴趣的书籍类型&nbsp;&nbsp;<small>Book Type</small></h2>
           </div>
         </div>
         <!-- E= 标题 -->
 
-        <!-- S= 左侧面板 -->
-        <div class="col-md-2 col-md-offset-1">
-          <div class="panel panel-default" id="sidebar">
-            <div class="panel-body">
-              <a href="#" id="goToPhoto" target="_self"><img src="img/user_icon.png" alt="..." class="img-responsive img-circle center-block" id="userIcon"></a>
-              <a href="#" class="btn btn-default btn-block disabled"  id="goToSetting" target="_self">个人信息</a>
-              <a href="#" class="btn btn-default btn-block" id="goToPassword" target="_self">修改密码</a>
-            </div>
-          </div>
-        </div>
-        <!-- E= 左侧面板 -->
+        <div class="col-md-10 col-md-offset-1">
+          <h3><span class="label label-default" >文学</span></h3>
+        </div>  
 
-        <!-- S= 右侧主面板 -->
-        <div class="col-md-8">
-          <div class="panel panel-default" id="main-content">
-            <div class="panel-heading">
-              <h3 class="panel-title">个人信息</h3>
-            </div>
-            <div class="panel-body">
-              <form class="form-horizontal">
-                <div class="form-group">
-                  <label for="inputName" class="col-md-2 control-label">昵称/Name</label>
-                  <div class="col-md-10">
-                    <input type="text" class="form-control" id="inputName" placeholder="Name" required>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-md-2 control-label">性别/Gender</label>
-                  <div class="col-md-10">
-                    <label class="radio-inline">
-                      <input type="radio" name="inputGender" id="inputGenderBoy" value="option1"> 男
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="inputGender" id="inputGenderGirl" value="option2"> 女
-                    </label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputEmail" class="col-md-2 control-label">邮箱/Email</label>
-                  <div class="col-md-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputWeChat" class="col-md-2 control-label">微信/WeChat</label>
-                  <div class="col-md-4">
-                    <input type="text" class="form-control" id="inputWeChat" placeholder="WeChat">
-                  </div>
-                  <label for="inputQQ" class="col-md-2 control-label">QQ</label>
-                  <div class="col-md-4">
-                    <input type="tel" class="form-control" id="inputQQ" placeholder="QQ" pattern="[1-9][0-9]{4,14}">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputSchool" class="col-md-2 control-label">学校/School</label>
-                  <div class="col-md-4">
-                    <input type="text" class="form-control" id="inputSchool" placeholder="School">
-                  </div>
-                  <label for="inputMajor" class="col-md-2 control-label">专业/Major</label>
-                  <div class="col-md-4">
-                    <input type="text" class="form-control" id="inputMajor" placeholder="Major">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputBio" class="col-md-2 control-label">个人简介/Bio</label>
-                  <div class="col-md-10">
-                    <textarea class="form-control" rows="5" id="inputBio" placeholder="Tell a little about yourself"></textarea>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-md-offset-5 col-md-4">
-                    <button type="submit" class="btn btn-default" id="commitInfoChange">确认修改</button>
-                    <button type="reset" class="btn btn-default">重置</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+         <div class="col-md-10 col-md-offset-1">
+          <a class="btn btn-default" role="button">小说</a>
+          <a class="btn btn-default" role="button">外国文学</a>
+          <a class="btn btn-default" role="button">文学</a>
+          <a class="btn btn-default" role="button">随笔</a>
+          <a class="btn btn-default" role="button">中国文学</a>
+          <a class="btn btn-default" role="button">经典</a>
+          <a class="btn btn-default" role="button">日本文学</a>
+          <a class="btn btn-default" role="button">散文</a>
+          <br></br>
+          <a class="btn btn-default" role="button">诗歌</a>
+          <a class="btn btn-default" role="button">童话</a>
+          <a class="btn btn-default" role="button">名著</a>
+          <a class="btn btn-default" role="button">儿童文学</a>
+          <a class="btn btn-default" role="button">当代文学</a>
+          <a class="btn btn-default" role="button">外国名著</a>
         </div>
-        <!-- E= 右侧主面板 -->
 
-      </div>
+
+        <div class="col-md-10 col-md-offset-1">
+          <h3><span class="label label-default" >流行</span></h3>
+        </div>  
+
+         <div class="col-md-10 col-md-offset-1">
+          <a class="btn btn-default" role="button">漫画</a>
+          <a class="btn btn-default" role="button">绘本</a>
+          <a class="btn btn-default" role="button">推理</a>
+          <a class="btn btn-default" role="button">青春</a>
+          <a class="btn btn-default" role="button">言情</a>
+          <a class="btn btn-default" role="button">科幻</a>
+          <a class="btn btn-default" role="button">悬疑</a>
+          <a class="btn btn-default" role="button">武侠</a>
+          <br></br>
+          <a class="btn btn-default" role="button">奇幻</a>
+          <a class="btn btn-default" role="button">校园</a>
+          <a class="btn btn-default" role="button">轻小说</a>
+          <a class="btn btn-default" role="button">魔幻</a>
+          <a class="btn btn-default" role="button">推理小说</a>
+          <a class="btn btn-default" role="button">穿越</a>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1">
+          <h3><span class="label label-default" >文化</span></h3>
+        </div>  
+
+        <div class="col-md-10 col-md-offset-1">
+          <a class="btn btn-default" role="button">历史</a>
+          <a class="btn btn-default" role="button">心理学</a>
+          <a class="btn btn-default" role="button">哲学</a>
+          <a class="btn btn-default" role="button">传记</a>
+          <a class="btn btn-default" role="button">社会学</a>
+          <a class="btn btn-default" role="button">文化</a>
+          <a class="btn btn-default" role="button">艺术</a>
+          <a class="btn btn-default" role="button">设计</a>
+          <br></br>
+          <a class="btn btn-default" role="button">建筑</a>
+          <a class="btn btn-default" role="button">政治</a>
+          <a class="btn btn-default" role="button">宗教</a>
+          <a class="btn btn-default" role="button">电影</a>
+          <a class="btn btn-default" role="button">音乐</a>
+          <a class="btn btn-default" role="button">戏剧</a>
+          <a class="btn btn-default" role="button">军事</a>
+          <a class="btn btn-default" role="button">绘画</a>
+          <a class="btn btn-default" role="button">近代史</a>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1">
+          <h3><span class="label label-default" >生活</span></h3>
+        </div>  
+
+        <div class="col-md-10 col-md-offset-1">
+          <a class="btn btn-default" role="button">爱情</a>
+          <a class="btn btn-default" role="button">旅行</a>
+          <a class="btn btn-default" role="button">成长</a>
+          <a class="btn btn-default" role="button">励志</a>
+          <a class="btn btn-default" role="button">心理</a>
+          <a class="btn btn-default" role="button">摄影</a>
+          <a class="btn btn-default" role="button">女性</a>
+          <a class="btn btn-default" role="button">职场</a>
+          <br></br>
+          <a class="btn btn-default" role="button">美食</a>
+          <a class="btn btn-default" role="button">政治</a>
+          <a class="btn btn-default" role="button">教育</a>
+          <a class="btn btn-default" role="button">游记</a>
+          <a class="btn btn-default" role="button">健康</a>
+          <a class="btn btn-default" role="button">情感</a>
+          <a class="btn btn-default" role="button">养生</a>
+          <a class="btn btn-default" role="button">两性</a>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1">
+          <h3><span class="label label-default" >经管</span></h3>
+        </div>  
+
+        <div class="col-md-10 col-md-offset-1">
+          <a class="btn btn-default" role="button">经济学</a>
+          <a class="btn btn-default" role="button">管理</a>
+          <a class="btn btn-default" role="button">商业</a>
+          <a class="btn btn-default" role="button">金融</a>
+          <a class="btn btn-default" role="button">投资</a>
+          <a class="btn btn-default" role="button">营销</a>
+          <a class="btn btn-default" role="button">创业</a>
+          <a class="btn btn-default" role="button">理财</a>
+          <br></br>
+          <a class="btn btn-default" role="button">广告</a>
+          <a class="btn btn-default" role="button">股票</a>
+          <a class="btn btn-default" role="button">企业史</a>
+          <a class="btn btn-default" role="button">策划</a>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1">
+          <h3><span class="label label-default" >科技</span></h3>
+        </div>  
+
+        <div class="col-md-10 col-md-offset-1">
+          <a class="btn btn-default" role="button" onclick="background-color:yellow">科普</a>
+          <a class="btn btn-default" role="button">互联网</a>
+          <a class="btn btn-default" role="button">编程</a>
+          <a class="btn btn-default" role="button">科学</a>
+          <a class="btn btn-default" role="button">交互设计</a>
+          <a class="btn btn-default" role="button">用户体验</a>
+          <a class="btn btn-default" role="button">算法</a>
+          <a class="btn btn-default" role="button">web</a>
+          <br></br>
+          <a class="btn btn-default" role="button" onclick="background:yellow">科技</a>
+          <a class="btn btn-default" role="button">UE</a>
+          <a class="btn btn-default" role="button">通信</a>
+          <a class="btn btn-default" role="button">交互</a>
+          <a class="btn btn-default" role="button">UCD</a>
+          <a class="btn btn-default" role="button">神经网络</a>
+          <a class="btn btn-default" role="button">程序</a>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1">
+          <br><br><br>
+          <button type="button" btn-lg class="btn btn-success center" active id="finishSelect"
+           style="background:gray;color:white">完成选择</button>
+          <br><br><br>
+        </div>  
 
     </div> 
 
   <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/setting.js"></script>
+  <script type="text/javascript" src="js/tags.js"></script>
 </body>
 </html>
