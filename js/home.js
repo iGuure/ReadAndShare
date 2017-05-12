@@ -9,8 +9,8 @@ $(document).ready(function () {
   $('.tag').click(function() {
   	$(this).parent().children().removeClass("active");
   	$(this).addClass("active");
-  	$("#content").children().last().remove();
   	loadContent($(this).attr("title"));
+  	$("#content").children().last().prev().remove();
   });
 
 });
@@ -19,6 +19,7 @@ function loadContent(tag) {
 	$.ajax({
 		url: "res/frame/" + tag + ".html",
 		type: "GET",
+		async: false,
 		success: function(result) {
 			$("#content").append(result);
 		}
