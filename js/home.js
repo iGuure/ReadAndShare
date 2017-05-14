@@ -4,14 +4,28 @@ $(document).ready(function () {
     $('.row-offcanvas').toggleClass('active')
   });
 
-  loadContent("recBooks");
+  // actual use
+  // loadContent("recBooks");
+
+  // $('.tag').click(function() {
+  // 	$(this).parent().children().removeClass("active");
+  // 	$(this).addClass("active");
+  // 	loadContent($(this).attr("title"));
+  // 	$("#content").children().last().prev().remove();
+
+  // });
 
   $('.tag').click(function() {
   	$(this).parent().children().removeClass("active");
   	$(this).addClass("active");
-  	loadContent($(this).attr("title"));
-  	$("#content").children().last().prev().remove();
-  });
+  	if ($(this).attr("title") == "recBooks") {
+	  	$("#recBooks").css("display", "");
+	  	$("#ranking").css("display", "none");
+  	} else {
+	  	$("#ranking").css("display", "");
+	  	$("#recBooks").css("display", "none");
+  	}
+  })
 
 });
 
