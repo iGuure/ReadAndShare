@@ -1,7 +1,12 @@
 $(document).ready(function() {
 	
 	$(".btn").click(function() {
-		$(this).css("background-color","yellow");
+		if ($(this).css("background-color") == "rgb(255, 255, 0)"){
+			$(this).css("background-color","white");
+		}else{
+			$(this).css("background-color","yellow");
+		}
+			
 	});
 	
 	$("#search").click(function(){
