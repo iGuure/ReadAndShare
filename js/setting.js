@@ -1,11 +1,27 @@
 $(document).ready(function() {
 	
+	$("#goToSetting").click(function() {
+		$("#personalInfo").css("display", "");
+		$("#modifyPassword").css("display", "none");
+	  	$("#modifyPhoto").css("display", "none");
+	  	$(this).addClass("disabled");
+	  	$("#goToPassword").removeClass("disabled");
+	})
+
 	$("#goToPassword").click(function() {
-		window.location.href = "password.html";
+		$("#modifyPassword").css("display", "");
+		$("#personalInfo").css("display", "none");
+	  	$("#modifyPhoto").css("display", "none");
+	  	$(this).addClass("disabled");
+	  	$("#goToSetting").removeClass("disabled");
 	});
 
 	$("#goToPhoto").click(function() {
-		window.location.href = "photo.html";
-	});
+		$("#modifyPhoto").css("display", "");
+		$("#personalInfo").css("display", "none");
+		$("#modifyPassword").css("display", "none");
+		$("#goToSetting").removeClass("disabled");
+	  	$("#goToPassword").removeClass("disabled");
+	})
 
 })
