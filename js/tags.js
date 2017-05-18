@@ -15,5 +15,6 @@ $(document).ready(function() {
 
 	$("#finishSelect").click(function(){
 		$("#finishSelect").css("background-color","gray");
+		window.location.href="Bookshelf.html";
 	});
 })
