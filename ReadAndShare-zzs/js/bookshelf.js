@@ -11,13 +11,14 @@ function removeElement() {
 	$(this).parent().remove();
 
 }
-$(".more").children("li").click(function(){
+$(".move").children("li").click(function(){
 	
 	$("#bookTab").children("li").removeClass('active');
 })
 $("#bookManager").click(function() {
-	$(".closeTab").toggle(200);
-    $(".closeLayer").toggle(200);
+	$("#new").toggle();
+	$(".closeTab").toggle(150);
+    $(".closeLayer").toggle(150);
 				});
 $(".closeLayer").click(removeElement);
 $(".closeTab").click(removeElement);
@@ -25,6 +26,7 @@ $("#new").click(function() {
 	$(this).hide();
      var newInput = $('<li><input type="text" class="form-control input" id="input"></li>')
 	 $("#bookTab").children(":last").before(newInput);
+     
 	 $(".input").keydown(function(e) {
 				
 		if (e.keyCode == 13) {
