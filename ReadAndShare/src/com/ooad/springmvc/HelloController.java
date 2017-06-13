@@ -11,7 +11,6 @@ public class HelloController{
 
    @RequestMapping(method = RequestMethod.GET)
    public String printHello(ModelMap model) {
-      return "tags";
+      return "bookWiki";
    }
-
 }
