@@ -14,10 +14,13 @@ import model.ChangePassword;
 import model.LoginUser;
 import model.SettingUser;
 import util.DBConnection;
+import util.IDBConnection;
 import util.LoginStatus;
 
 @Controller
 public class SettingController {
+	
+	private IDBConnection dBConnection = DBConnection.getInstance();
 
 	private LoginStatus loginStatus = LoginStatus.getInstance();
 	
@@ -43,7 +46,7 @@ public class SettingController {
 	   String major = settingUser.getMajor();
 	   String bio = settingUser.getBio();
 	   
-	   DBConnection.connSQL();
+	   dBConnection.connSQL();
 	   String update = "update user set name='" + name + "'"
 			   + ", gender='" + gender + "'"
 			   + ", email='" + email + "'"
@@ -53,8 +56,8 @@ public class SettingController {
 			   + ", major='" + major + "'"
 			   + ", bio='" + bio + "'"
 			   + "where account='" + account + "'";
-	   DBConnection.updateSQL(update);
-	   DBConnection.deconnSQL();
+	   dBConnection.updateSQL(update);
+	   dBConnection.deconnSQL();
 
 	   return "redirect:setting";
    }
@@ -72,10 +75,10 @@ public class SettingController {
 		   return "redirect:setting";
 	   }
 	   
-	   DBConnection.connSQL();
+	   dBConnection.connSQL();
 	   
 	   String select = "select * from user where account='" + account + "'";
-	   ResultSet resultSet = DBConnection.selectSQL(select);
+	   ResultSet resultSet = dBConnection.selectSQL(select);
 	   try {
 		   if(!resultSet.next()){
 			   System.out.println("没有找到账号");
@@ -90,15 +93,15 @@ public class SettingController {
 		   // TODO Auto-generated catch block
 		   e.printStackTrace();
 	   }
-	   DBConnection.deconnSQL();
+	   dBConnection.deconnSQL();
 	   
 	   
-	   DBConnection.connSQL();
+	   dBConnection.connSQL();
 	   String update = "update user set password='" + newPassword1 + "'"
 			   + "where account='" + account + "'";
 	   System.out.println("写入新密码");
-	   DBConnection.updateSQL(update);
-	   DBConnection.deconnSQL();
+	   dBConnection.updateSQL(update);
+	   dBConnection.deconnSQL();
 
 	   return "redirect:setting";
    }

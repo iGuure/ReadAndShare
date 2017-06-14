@@ -16,9 +16,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import model.RegisterUser;
 import util.DBConnection;
+import util.IDBConnection;
 
 @Controller
 public class RegisterController{
+	
+	private IDBConnection dBConnection = DBConnection.getInstance();
 
    @RequestMapping(value = "/register", method = RequestMethod.GET)
    public ModelAndView showPage(ModelMap model) {
@@ -34,7 +37,7 @@ public class RegisterController{
       String password2 = registerUser.getPassword2();
       
 	   String selectSql = "select * from user ";
-	   ResultSet resultSet = DBConnection.selectSQL(selectSql);
+	   ResultSet resultSet = dBConnection.selectSQL(selectSql);
 	   response.setContentType("text/html;charset=UTF-8");
 	   PrintWriter out = response.getWriter();
 	   while(resultSet.next())
@@ -52,7 +55,7 @@ public class RegisterController{
     	  // TODO: add into Table User
     	  String insertSql = "insert into user(account,password"
     	  + ") values('" + phoneNumber + "', '" + password1 + "')";
-    	  Boolean result = DBConnection.insertSQL(insertSql);
+    	  Boolean result = dBConnection.insertSQL(insertSql);
     	  System.out.println("注册成功！");
           return "redirect:login";
       } else {

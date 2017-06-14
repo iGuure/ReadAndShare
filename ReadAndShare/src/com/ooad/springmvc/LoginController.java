@@ -13,10 +13,13 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import model.LoginUser;
 import util.DBConnection;
+import util.IDBConnection;
 import util.LoginStatus;
 
 @Controller
 public class LoginController{
+	
+	private IDBConnection dBConnection = DBConnection.getInstance();
 	
 	private LoginStatus loginStatus = LoginStatus.getInstance();
 
@@ -40,9 +43,9 @@ public class LoginController{
 	   
 	   // TODO: read from Table User
 	   // TODO: set result
-	   DBConnection.connSQL();
+	   dBConnection.connSQL();
 	   String select = "select * from user where account='" + phoneNumber + "'";
-	   ResultSet resultSet = DBConnection.selectSQL(select);
+	   ResultSet resultSet = dBConnection.selectSQL(select);
 	   try {
 		   if(!resultSet.next()){
 			   result = false;

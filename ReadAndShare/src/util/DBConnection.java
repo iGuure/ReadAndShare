@@ -7,11 +7,20 @@ import java.sql.SQLException;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
-public class DBConnection {
+public class DBConnection implements IDBConnection {
+	
+	private static DBConnection instance = new DBConnection();
+	
+	private DBConnection() {}
+	
+	public static DBConnection getInstance() {
+		return instance;
+	}
+	 
 	private static Connection conn = null;   
 	  
     // connect to MySQL  
-    public static void connSQL() {  
+    public void connSQL() {  
         String url = "jdbc:mysql://localhost:3306/ReadAndShare?characterEncoding=UTF-8";  
         String username = "root";  
         String password = "12345678"; // 加载驱动程序以连接<a href="http://lib.csdn.net/base/mysql" class='replace_word' title="MySQL知识库" target='_blank' style='color:#df3434; font-weight:bold;'>数据库</a>   
@@ -34,7 +43,7 @@ public class DBConnection {
     }  
   
     // disconnect to MySQL  
-    public static void deconnSQL() {  
+    public void deconnSQL() {  
         try {  
             if (conn != null)  
                 conn.close();  
@@ -46,7 +55,7 @@ public class DBConnection {
     }  
   
     // execute selection language  
-    public static ResultSet selectSQL(String sql) { 
+    public ResultSet selectSQL(String sql) { 
     	connSQL();
         ResultSet rs = null;  
         try {  
@@ -61,7 +70,7 @@ public class DBConnection {
     }  
   
     // execute insertion language  
-    public static boolean insertSQL(String sql) {  
+    public boolean insertSQL(String sql) {  
     	connSQL();
         try {  
         	PreparedStatement statement = (PreparedStatement) conn.prepareStatement(sql);  
@@ -79,7 +88,7 @@ public class DBConnection {
         return false;  
     }  
     //execute delete language  
-    public static boolean deleteSQL(String sql) {  
+    public boolean deleteSQL(String sql) {  
     	connSQL();
         try {  
         	PreparedStatement statement = (PreparedStatement) conn.prepareStatement(sql);  
@@ -97,7 +106,7 @@ public class DBConnection {
         return false;  
     }  
     //execute update language  
-    public static boolean updateSQL(String sql) {  
+    public boolean updateSQL(String sql) {  
     	connSQL();
         try {  
         	PreparedStatement statement = (PreparedStatement) conn.prepareStatement(sql);  

@@ -7,10 +7,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import util.DBConnection;
+import util.IDBConnection;
 import util.LoginStatus;
 
 @Controller
 public class TagsController {
+	
+	private IDBConnection dBConnection = DBConnection.getInstance();
 	
 	private LoginStatus loginStatus = LoginStatus.getInstance();
 	
@@ -40,12 +43,12 @@ public class TagsController {
 //		   		+ ") values('madiao')";
 //		   Boolean resultSet = DBConnection.insertSQL(insertSql);
 //		   System.out.println("updating"+resultSet);
-		   DBConnection.insertSQL(insertSql1);
-		   DBConnection.insertSQL(insertSql2);
-		   DBConnection.insertSQL(insertSql3);
-		   DBConnection.insertSQL(insertSql4);
-		   DBConnection.insertSQL(insertSql5);
-		   DBConnection.insertSQL(insertSql6);
+		   dBConnection.insertSQL(insertSql1);
+		   dBConnection.insertSQL(insertSql2);
+		   dBConnection.insertSQL(insertSql3);
+		   dBConnection.insertSQL(insertSql4);
+		   dBConnection.insertSQL(insertSql5);
+		   dBConnection.insertSQL(insertSql6);
 		   
 		   return "redirect:home";
 		   
