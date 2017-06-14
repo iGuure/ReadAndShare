@@ -40,25 +40,25 @@ public class LoginController{
 	   
 	   // TODO: read from Table User
 	   // TODO: set result
-//	   DBConnection.connSQL();
-//	   String select = "select * from user where phone_num='" + phoneNumber + "'";
-//	   ResultSet resultSet = DBConnection.selectSQL(select);
-//	   try {
-//		   if(!resultSet.next()){
-//			   result = false;
-//		   }else{
-//			   if(resultSet.getString("password").equals(password)){
-//				   result = true;
-//			   }else{
-//				   result = false;
-//			   }
-//		   }
-//	   } catch (SQLException e) {
-//		   // TODO Auto-generated catch block
-//		   e.printStackTrace();
-//	   }
+	   DBConnection.connSQL();
+	   String select = "select * from user where account='" + phoneNumber + "'";
+	   ResultSet resultSet = DBConnection.selectSQL(select);
+	   try {
+		   if(!resultSet.next()){
+			   result = false;
+		   }else{
+			   if(resultSet.getString("password").equals(password)){
+				   result = true;
+			   }else{
+				   result = false;
+			   }
+		   }
+	   } catch (SQLException e) {
+		   // TODO Auto-generated catch block
+		   e.printStackTrace();
+	   }
+
 	   
-	   result = true;
 	   
 	   if (result) {
 		   

@@ -22,7 +22,7 @@ public class TagsController {
 		   
 		   if (loginStatus.isLogin()) {
 			   model.addAttribute("phoneNumber", loginStatus.getUserPhoneNumber());
-			   return "tags";
+			   return "tags"; 
 		   }
 		   else							return "redirect:login";
 		   
@@ -31,26 +31,26 @@ public class TagsController {
 	   @RequestMapping(value = "/updateTags", method = RequestMethod.GET)
 	   public String updateTags(ModelMap model) {
 
-		   // TODO: update tags
-		   DBConnection.connSQL();
-		   String insertSql = "insert into tag(tag"
-		   		+ "_name) values('jiongcheng')";
-		   Boolean resultSet = DBConnection.insertSQL(insertSql);
-		   System.out.println("updating"+resultSet);
-		   return "redirect:home";
-		   
-	   }
-	   @RequestMapping(value = "/selectTags", method = RequestMethod.GET)
-	   public String selectTags(ModelMap model) throws SQLException {
 
-		   // TODO: update tags
-		   DBConnection.connSQL();
-		   String selectSql = "select * from tag ";
-		   ResultSet resultSet = DBConnection.selectSQL(selectSql);
-		   while(resultSet.next())
-		   {
-			  System.out.println("selecting"+resultSet.getString("tag_name"));
-		   }
+	   
+		   String insertSql1 = "insert into tag(tag_type,tag_name) values('��ѧ','С˵')";
+		   String insertSql2 = "insert into user_tag(user_account,tag_name) values('"+loginStatus.getUserPhoneNumber()+"','"+"С˵')";
+		   String insertSql3 = "insert into tag(tag_type,tag_name) values('����','����')";
+		   String insertSql4 = "insert into user_tag(user_account,tag_name) values('"+loginStatus.getUserPhoneNumber()+"','����')";
+		   String insertSql5 = "insert into tag(tag_type,tag_name) values('�Ƽ�','������')";
+		   String insertSql6 = "insert into user_tag(user_account,tag_name) values('"+loginStatus.getUserPhoneNumber()+"','"+"������')";
+//		   DBConnection.connSQL();
+//		   String insertSql = "insert into tag(tag_name"
+//		   		+ ") values('madiao')";
+//		   Boolean resultSet = DBConnection.insertSQL(insertSql);
+//		   System.out.println("updating"+resultSet);
+		   DBConnection.insertSQL(insertSql1);
+		   DBConnection.insertSQL(insertSql2);
+		   DBConnection.insertSQL(insertSql3);
+		   DBConnection.insertSQL(insertSql4);
+		   DBConnection.insertSQL(insertSql5);
+		   DBConnection.insertSQL(insertSql6);
+
 		   
 		   return "redirect:home";
 		   
