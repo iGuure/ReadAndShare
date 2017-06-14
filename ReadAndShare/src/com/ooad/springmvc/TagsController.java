@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import util.DBConnection;
 import util.LoginStatus;
 
 @Controller
@@ -18,7 +19,7 @@ public class TagsController {
 		   
 		   if (loginStatus.isLogin()) {
 			   model.addAttribute("phoneNumber", loginStatus.getUserPhoneNumber());
-			   return "tags";
+			   return "tags"; 
 		   }
 		   else							return "redirect:login";
 		   
@@ -29,7 +30,12 @@ public class TagsController {
 
 		   // TODO: update tags
 		   
-		   System.out.println("updating");
+//		   DBConnection.connSQL();
+//		   String insertSql = "insert into tag(tag_name"
+//		   		+ ") values('madiao')";
+//		   Boolean resultSet = DBConnection.insertSQL(insertSql);
+//		   System.out.println("updating"+resultSet);
+		   
 		   return "redirect:home";
 		   
 	   }

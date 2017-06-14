@@ -41,7 +41,7 @@ public class LoginController{
 	   // TODO: read from Table User
 	   // TODO: set result
 	   DBConnection.connSQL();
-	   String select = "select * from user where phone_num='" + phoneNumber + "'";
+	   String select = "select * from user where account='" + phoneNumber + "'";
 	   ResultSet resultSet = DBConnection.selectSQL(select);
 	   try {
 		   if(!resultSet.next()){
@@ -57,6 +57,7 @@ public class LoginController{
 		   // TODO Auto-generated catch block
 		   e.printStackTrace();
 	   }
+	   
 	   
 	   if (result) {
 		   

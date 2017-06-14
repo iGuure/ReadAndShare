@@ -12,9 +12,9 @@ public class DBConnection {
 	  
     // connect to MySQL  
     public static void connSQL() {  
-        String url = "jdbc:mysql://localhost:3307/test?characterEncoding=UTF-8";  
-        String username = "test";  
-        String password = "123456"; // 加载驱动程序以连接<a href="http://lib.csdn.net/base/mysql" class='replace_word' title="MySQL知识库" target='_blank' style='color:#df3434; font-weight:bold;'>数据库</a>   
+        String url = "jdbc:mysql://localhost:3306/ReadAndShare?characterEncoding=UTF-8";  
+        String username = "root";  
+        String password = "12345678"; // 加载驱动程序以连接<a href="http://lib.csdn.net/base/mysql" class='replace_word' title="MySQL知识库" target='_blank' style='color:#df3434; font-weight:bold;'>数据库</a>   
         try {   
             Class.forName("com.mysql.jdbc.Driver" );   
             conn = (Connection) DriverManager.getConnection( url,username, password );
@@ -46,7 +46,8 @@ public class DBConnection {
     }  
   
     // execute selection language  
-    public static ResultSet selectSQL(String sql) {  
+    public static ResultSet selectSQL(String sql) { 
+    	connSQL();
         ResultSet rs = null;  
         try {  
         	PreparedStatement statement = (PreparedStatement) conn.prepareStatement(sql);  
@@ -54,12 +55,14 @@ public class DBConnection {
             System.out.println("查询数据库成功");  
         } catch (SQLException e) {  
             e.printStackTrace();  
-        }  
+        } 
+//        deconnSQL();
         return rs;  
     }  
   
     // execute insertion language  
     public static boolean insertSQL(String sql) {  
+    	connSQL();
         try {  
         	PreparedStatement statement = (PreparedStatement) conn.prepareStatement(sql);  
             statement.executeUpdate();
@@ -72,10 +75,12 @@ public class DBConnection {
             System.out.println("插入时出错：");  
             e.printStackTrace();  
         }  
+        deconnSQL();
         return false;  
     }  
     //execute delete language  
     public static boolean deleteSQL(String sql) {  
+    	connSQL();
         try {  
         	PreparedStatement statement = (PreparedStatement) conn.prepareStatement(sql);  
             statement.executeUpdate();
@@ -88,10 +93,12 @@ public class DBConnection {
             System.out.println("删除时出错：");  
             e.printStackTrace();  
         }  
+        deconnSQL();
         return false;  
     }  
     //execute update language  
     public static boolean updateSQL(String sql) {  
+    	connSQL();
         try {  
         	PreparedStatement statement = (PreparedStatement) conn.prepareStatement(sql);  
             statement.executeUpdate();
@@ -104,6 +111,7 @@ public class DBConnection {
             System.out.println("更新时出错：");  
             e.printStackTrace();  
         }  
+        deconnSQL();
         return false;  
     }  
 }	
