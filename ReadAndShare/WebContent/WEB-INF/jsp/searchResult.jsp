@@ -27,15 +27,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Read & Share</a>
+        <a class="navbar-brand" href="/ReadAndShare/home">Read & Share</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">我的书房</a></li>
-        <li><a href="#">个人设置</a></li>
+          <li><a href="/ReadAndShare/bookShelf?phoneNumber=${phoneNumber}">我的书房</a></li>
+          <li><a href="/ReadAndShare/setting">个人设置</a></li>
+		  <li><a href="/ReadAndShare/unregister">注销</a></li>
       </ul>
       <form class="navbar-form navbar-right">
-        <input type="text" class="form-control" placeholder="Search">
+		    <div class="input-group">
+		      <input type="text" class="form-control" placeholder="Search for..." id="searchContent">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button" id="searchButton">Go</button>
+		      </span>
+		    </div><!-- /input-group -->
       </form>
       </div>
     </div>
@@ -123,5 +129,6 @@
   <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/searchresult"></script>
+	<script type="text/javascript" src="js/search.js"></script>
 </body>
 </html>

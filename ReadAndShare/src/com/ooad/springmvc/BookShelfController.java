@@ -25,7 +25,11 @@ public class BookShelfController {
 			   model.addAttribute("phoneNumber", loginStatus.getUserPhoneNumber());
 			   return "bookShelf";
 		   }
-		   else							return "bookShelf";
+		   else							return "login";
+	   }
+	   @RequestMapping(value = "/friendsBookshelf", method = RequestMethod.GET)
+	   public String showFriendPage(ModelMap model, @RequestParam("id") String name) {
+		   					return "friendsBookshelf";
 	   }
 	   @RequestMapping(value = "/selectBookList", method = RequestMethod.GET)
 	   public String selectBookList(ModelMap model,@RequestParam("account") String account) throws SQLException {
@@ -117,5 +121,6 @@ public class BookShelfController {
 		   DBConnection.deconnSQL();
 		   return "redirect:home";
 	   }
+	   
 	   
 }

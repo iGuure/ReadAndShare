@@ -11,15 +11,7 @@
 
 <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/bookshelf.css">
-<!-- <script type="text/javascript">
-	function GetQueryString(name) {
-		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-		var r = window.location.search.substr(1).match(reg);
-		if (r != null)
-			return unescape(r[2]);
-		return null;
-	} 
-</script>-->
+
 </head>
 <body>
 	<div class="container">
@@ -34,29 +26,21 @@
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-        			<a class="navbar-brand" href="/ReadAndShare/home">Read & Share</a>
+					<a class="navbar-brand" href="#">Read & Share</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-			          <li><a href="/ReadAndShare/bookShelf?phoneNumber=${phoneNumber}">我的书房</a></li>
-			          <li><a href="/ReadAndShare/setting">个人设置</a></li>
-					  <li><a href="/ReadAndShare/unregister">注销</a></li>
+						<li><a href="#">我的书房</a></li>
+						<li><a href="#">个人设置</a></li>
 					</ul>
 					<form class="navbar-form navbar-right">
-		    <div class="input-group">
-		      <input type="text" class="form-control" placeholder="Search for..." id="searchContent">
-		      <span class="input-group-btn">
-		        <button class="btn btn-default" type="button" id="searchButton">Go</button>
-		      </span>
-		    </div><!-- /input-group -->
+						<input type="text" class="form-control" placeholder="Search">
 					</form>
 				</div>
 			</div>
 		</nav>
 		<!-- E= 导航条 -->
-		
-  		<br><br>
-  		
+
 		<div class="row">
 			<div class="col-md-12">
 				<div class="page-header" id="title">
@@ -71,7 +55,11 @@
 					src="res/img/user_icon.png" alt="..."> </a>
 				<div class="caption">
 
-					<p class="text-center">铄哥哥</p>
+					<p class="text-center">
+
+				林炯程
+
+					</p>
 				</div>
 				<div class="friend">
 					<h4 class="text-left ">
@@ -81,8 +69,8 @@
 					<ul class="nav navbar-default  nav-stacked booklist"
 						role="navigation">
 						<li role="presentation" class="active "><a class="bookitem"
-							href="friendsBookshelf?id=林炯程">林炯程</a></li>
-						<li role="presentation"><a class="bookitem" href="friendsBookshelf.html?id=马乙凯">马乙凯</a></li>
+							href="friendsBookshelf.html?id=黄思彬">黄思彬</a></li>
+						<li role="presentation"><a class="bookitem" href="#">马乙凯</a></li>
 
 					</ul>
 				</div>
@@ -92,27 +80,12 @@
 				<nav class="navbar navbar-default  bookHead">
 
 					<ul id="bookTab" class="nav navbar-nav navbar-tabs">
-						<li class="active"><a href="#like" data-toggle="tab">我喜欢的书</a>
-							<div class="closeTab" style="display: none">
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-							</div></li>
+						<li class="active"><a href="#like" data-toggle="tab">我喜欢的书</a></li>
 
-						<li><a href="#ancient" data-toggle="tab">古韵古风</a>
-							<div class="closeTab" style="display: none">
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-							</div></li>
-						<li><button id="new" class="btn btn-default btn-sm">
-								<span class="glyphicon glyphicon-plus" aria-hidden="true">新建</span>
-							</button></li>
-							
+						<li><a href="#modern" data-toggle="tab">现代言情</a></li>
 					</ul>
 
-					<ul class="nav navbar-nav navbar-right">
-						<li><a id="bookManager" href="#"> <span
-								class="glyphicon glyphicon-cog " aria-hidden="true">书籍管理</span></a></li>
-					</ul>
+
 					<ul class="nav navbar-nav navbar-right">
 
 						<li role="presentation" class="dropdown"><a
@@ -120,123 +93,62 @@
 							role="button" aria-haspopup="true" aria-expanded="false"> 更多<span
 								class="caret"></span>
 						</a>
-							<ul class="dropdown-menu dropdown-menu-left more">
-								<li role="presentation"><a data-toggle="tab"
-									role="menuitem" tabindex="-1" href="#null">游戏人生</a></li>
+							<ul class="dropdown-menu dropdown-menu-left ">
+								<li role="presentation"><a role="menuitem" tabindex="-1"
+									data-toggle="tab" href="#null">游戏人生</a></li>
 								<li role="presentation"><a role="menuitem" tabindex="-1"
 									data-toggle="tab" href="#null">现代言情</a></li>
 							</ul></li>
 
 					</ul>
 				</nav>
-
+				<div class="tab-content">
 				<div class="tab-content">
 					<div class="row bookBody tab-pane fade  " id="null">
 					</div>
 					<div class="row bookBody tab-pane fade in active " id="like">
-						<div class="col-xs-3 col-md-3">
+						<div class="col-xs-3 col-md-3 ">
 							<a href="#" class="thumbnail"> <img src="res/img/book1.png">
 							</a>
-							<div class="closeLayer" style="display: none">
-
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-
-							</div>
 						</div>
 						<div class="col-xs-3 col-md-3 ">
 							<a href="#" class="thumbnail"> <img src="res/img/book2.png">
 							</a>
-							<div class="closeLayer" style="display: none">
-
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-
-							</div>
 						</div>
 						<div class="col-xs-3 col-md-3 ">
 							<a href="#" class="thumbnail "> <img src="res/img/book3.png">
 							</a>
-							<div class="closeLayer" style="display: none">
-
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-
-							</div>
 						</div>
 						<div class="col-xs-3 col-md-3 ">
 							<a href="#" class="thumbnail"> <img src="res/img/book4.png">
 							</a>
-							<div class="closeLayer" style="display: none">
-
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-
-							</div>
 						</div>
 						<div class="col-xs-3 col-md-3 ">
 							<a href="#" class="thumbnail"> <img src="res/img/book5.png">
 							</a>
-							<div class="closeLayer" style="display: none">
-
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-
-							</div>
 						</div>
 					</div>
-					<div class="row bookBody tab-pane fade" id="ancient">
+					<div class="row bookBody tab-pane fade" id="modern">
 						<div class="col-xs-3 col-md-3 ">
 							<a href="#" class="thumbnail"> <img src="res/img/book6.png">
 							</a>
-							<div class="closeLayer" style="display: none">
-
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-
-							</div>
-						</div>
-						<div class="col-xs-3 col-md-3 ">
-							<a href="#" class="thumbnail"> <img src="res/img/book5.png">
-							</a>
-							<div class="closeLayer" style="display: none">
-
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-
-							</div>
 						</div>
 						<div class="col-xs-3 col-md-3 ">
 							<a href="#" class="thumbnail"> <img src="res/img/book7.png">
 							</a>
-							<div class="closeLayer" style="display: none">
-
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-
-							</div>
 						</div>
 						<div class="col-xs-3 col-md-3 ">
 							<a href="#" class="thumbnail"> <img src="res/img/book8.png">
 							</a>
-							<div class="closeLayer" style="display: none">
-
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-
-							</div>
 						</div>
 						<div class="col-xs-3 col-md-3 ">
 							<a href="#" class="thumbnail"> <img src="res/img/book9.png">
 							</a>
-							<div class="closeLayer" style="display: none">
-
-								<a class="glyphicon glyphicon-remove" role="menuitem"
-									tabindex="-1"> </a>
-
-							</div>
 						</div>
-
+						<div class="col-xs-3 col-md-3 ">
+							<a href="#" class="thumbnail"> <img src="res/img/book5.png">
+							</a>
+						</div>
 					</div>
 
 				</div>
@@ -244,9 +156,10 @@
 
 		</div>
 	</div>
+	</div>
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/bookshelf.js"></script>
-	<script type="text/javascript" src="js/search.js"></script>
 </body>
 </html>
