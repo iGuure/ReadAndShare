@@ -64,85 +64,89 @@
       <!-- E= 导航条 -->
   <br><br>
 
-    <div class="container">
-
-      <!-- content here! -->
-      <div class="row">
-
-        <div class="col-md-12">
-          <div class="page-header" id="title">
-            <h2>书籍百科&nbsp;&nbsp;</h2>
-          </div>
+  <div class="container">
+    <!-- content here! -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header" id="title">
+          <h2>书籍百科&nbsp;&nbsp;</h2>
         </div>
       </div>
-      <div class="row">
-          <div class="col-md-8">
+    </div>
 
-            <h3>巴格达警报&nbsp;&nbsp;</h3>
+    <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-8">
 
-            <div class="box">
-              <div class="img">
-                  <img src="res/img/book.jpg" alt="" />
+        <h3>巴格达警报&nbsp;&nbsp;</h3>
+
+        <div class="box">
+          <div class="img">
+              <img src="res/img/book.jpg" alt="" />
+          </div>
+
+          <ul class="list">
+              <li><span>作者：</span>[阿尔及利亚] 雅斯米纳·卡黛哈</li>
+              <li><span>出版社: </span>理想国 | 学林出版社</li>
+              <li><span>原作名: </span>Les sirènes de Bagdad</li>
+              <li><span>译者: </span>陈姿颖</li>
+              <li><span>出版年: </span>2017-4-1</li>
+              <li><span>页数：</span>269</li>
+              <li><span>定价: </span>36.00元</li>
+              <li><span>ISBN：</span>9787548611844</li> 
+              <li><span>评分：</span>8.9</li>
+              <div id="bg"><!--这里是背景，也就是灰色的星星-->
+
+                    <!--说明，这里的width就是设置分数啦，以我写的为例，一个星星的长度是12px，也就是1分12px，如果是4.3分，就是4.3*12px = 51.6px的长度，当然这个一般是取得数据后用js或者其他模板语言去控制的-->  
+                <div id="over" style="width:53.4px"></div><!--这里是遮罩，设置宽度以达到评分的效果-->  
               </div>
+              
+          </ul>
 
-              <ul class="list">
-                  <li><span>作者：</span>[阿尔及利亚] 雅斯米纳·卡黛哈</li>
-                  <li><span>出版社: </span>理想国 | 学林出版社</li>
-                  <li><span>原作名: </span>Les sirènes de Bagdad</li>
-                  <li><span>译者: </span>陈姿颖</li>
-                  <li><span>出版年: </span>2017-4-1</li>
-                  <li><span>页数：</span>269</li>
-                  <li><span>定价: </span>36.00元</li>
-                  <li><span>ISBN：</span>9787548611844</li> 
-                  <li><span>评分：</span>8.9</li>
-                  <div id="bg"><!--这里是背景，也就是灰色的星星-->
-
-                        <!--说明，这里的width就是设置分数啦，以我写的为例，一个星星的长度是12px，也就是1分12px，如果是4.3分，就是4.3*12px = 51.6px的长度，当然这个一般是取得数据后用js或者其他模板语言去控制的-->  
-                    <div id="over" style="width:53.4px"></div><!--这里是遮罩，设置宽度以达到评分的效果-->  
-                  </div>
-                  
-              </ul>
-
-            </div>
-          </div>
-          <div class="box col-md-4">
-            <br>
-            <ul class="list-group list">
-
-              <li class="list-group-item">
-                <span class="badge">14</span>
-                阅读数
-              </li>
-              <li class="list-group-item">
-                <span class="badge">10</span>
-                书评数
-              </li>
-              <li class="list-group-item">
-                <span class="badge">11</span>
-                回答问题数
-              </li>
-              <li class="list-group-item">
-                <span class="badge">13</span>
-                点赞数
-              </li>
-              <li class="list-group-item">
-                  赞一个
-                  <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"  id="like"></span>
-              </li>
-              <li class="list-group-item">
-                评价
-                <div id="bg"><!--这里是背景，也就是灰色的星星-->
-                <!--说明，这里的width就是设置分数啦，以我写的为例，一个星星的长度是12px，也就是1分12px，如果是4.3分，就是4.3*12px = 51.6px的长度，当然这个一般是取得数据后用js或者其他模板语言去控制的-->  
-                    <div id="over" style="width:0px"></div><!--这里是遮罩，设置宽度以达到评分的效果-->
-                </div>                
-              </li>
-
-            </ul>              
-          </div>
+        </div>
       </div>
-        <!-- <img src="res/img/book.jpg" alt="Responsive image" class="img-responsive" id="userIcon"> -->
 
-      <br>
+      
+      <div class="box col-md-3">
+        <br>
+        <ul class="list-group list">
+
+          <li class="list-group-item">
+            <span class="badge">14</span>
+            阅读数
+          </li>
+          <li class="list-group-item">
+            <span class="badge">10</span>
+            书评数
+          </li>
+          <li class="list-group-item">
+            <span class="badge">11</span>
+            回答问题数
+          </li>
+          <li class="list-group-item">
+            <span class="badge">13</span>
+            点赞数
+          </li>
+          <li class="list-group-item">
+              赞一个
+              <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"  id="like"></span>
+          </li>
+          <li class="list-group-item">
+            评价
+            <div id="bg"><!--这里是背景，也就是灰色的星星-->
+            <!--说明，这里的width就是设置分数啦，以我写的为例，一个星星的长度是12px，也就是1分12px，如果是4.3分，就是4.3*12px = 51.6px的长度，当然这个一般是取得数据后用js或者其他模板语言去控制的-->  
+                <div id="over" style="width:0px"></div><!--这里是遮罩，设置宽度以达到评分的效果-->
+            </div>                
+          </li>
+
+        </ul>              
+      </div>
+    </div>
+    </div>
+      <!-- <img src="img/book.jpg" alt="Responsive image" class="img-responsive" id="userIcon"> -->
+
+    <br>
+    <div class="col-md-12">
       <h4>标签</h4>
       <div class="container">
         <div class="hero-unit">
@@ -155,7 +159,10 @@
         </div>    
       </div>
       <br>
+    </div>  
+    
 
+    <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">作者介绍</h3>
@@ -165,8 +172,8 @@
           <p>译者|陈姿颖，英语、法语专职译者，译有《视觉工厂：图像诞生的关键故事》、《自慰：恐惧的历史》、《神谕之谜》、《从科学到想象》（合译）、《路易威登：传奇旅行箱100》（合译）等书。</p>
         </div>
       </div>
-
-
+    </div>
+    <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">书籍介绍</h3>
@@ -194,115 +201,111 @@
           <p>★一切都完了！这一幕就是终点，就是结束，接下来只有无尽的坠落、虚空。部族所有的神话、世上所有的传说，还有天上的星辰，全都失去了光彩。太阳依旧会升起，但对我来说，白日或黑夜已再无任何差别。</p>
         </div>
       </div>
+    </div>
 
-       <div class="row">
-
-        <div class="col-md-12">
-          <div class="page-header">
-            <h3>书评&nbsp;&nbsp;</h3>
-          </div>
+      <div class="col-md-12">
+        <div class="page-header">
+          <h3>书评&nbsp;&nbsp;</h3>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-9">
-            <ul class="media-list">
-                <li class="media">
-                    <div class="media-left">
-                        <a href="#">
-                            <img class="media-object img-circle" src="res/img/a.png" alt="广丰">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading"><a href="/ReadAndShare/bookShelf?phoneNumber=13000000000">风往北吹</a></h4>
 
-                        <p>阿加莎•克里斯蒂在二战后怀念起她曾去过的叙利亚时说，“我爱那片平静肥沃的土地和土地上纯朴的人们，他们知道如何大笑和享受生活，他们悠闲快活，他们有尊严、有礼貌、有幽默细胞，且不畏死亡。”而与曾经的乐土叙利亚同为阿拉伯国家的伊拉克，更是世界奇迹巴比伦空中花园...</p>
+      <div class="col-md-9">
+          <ul class="media-list">
+              <li class="media">
+                  <div class="media-left">
+                      <a href="#">
+                          <img class="media-object img-circle" src="res/img/a.png" alt="广丰">
+                      </a>
+                  </div>
+                  <div class="media-body">
+                      <h4 class="media-heading">风往北吹</h4>
 
-                        <div class="ds-comment-footer">
-                            <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年1月28日</span>&nbsp;
-                            <a>
-                                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true" id="like1"></span> 赞
-                            </a>
-                        </div>
-                        <hr/>
-                    </div>
-                </li>
-               
-                <li class="media">
-                    <div class="media-left">
-                        <a href="#">
-                            <img class="media-object img-circle" src="res/img/c.png" alt="菜鸟">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">菜鸡一枚我不哭</h4>
+                      <p>阿加莎•克里斯蒂在二战后怀念起她曾去过的叙利亚时说，“我爱那片平静肥沃的土地和土地上纯朴的人们，他们知道如何大笑和享受生活，他们悠闲快活，他们有尊严、有礼貌、有幽默细胞，且不畏死亡。”而与曾经的乐土叙利亚同为阿拉伯国家的伊拉克，更是世界奇迹巴比伦空中花园...</p>
 
-                        <p>任何一个时代，既具有繁花似锦的光明面，同样也具有污浊不堪的阴暗面。我们生活的世界，就是光明与阴暗交织的战场。有良知的作家，能够刺破浮夸的生活表象下隐藏的鲜血淋漓的真实，以反思和悲悯之心唤起读者心中的共鸣。</p>
+                      <div class="ds-comment-footer">
+                          <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年1月28日</span>&nbsp;
+                          <a>
+                              <span class="glyphicon glyphicon-heart-empty" aria-hidden="true" id="like1"></span> 赞
+                          </a>
+                      </div>
+                      <hr/>
+                  </div>
+              </li>
+             
+              <li class="media">
+                  <div class="media-left">
+                      <a href="#">
+                          <img class="media-object img-circle" src="res/img/c.png" alt="菜鸟">
+                      </a>
+                  </div>
+                  <div class="media-body">
+                      <h4 class="media-heading">菜鸡一枚我不哭</h4>
 
-                        <div class="ds-comment-footer">
-                            <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年5月10日</span>&nbsp;
-                            <a>
-                                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true" id="like2"></span> 赞
-                            </a>
-                        </div>
-                    </div>
-                </li>
-            <hr/>
-            <div class="form-group">
-                <span class="input input--isao">
-              <input placeholder="评论内容" class="input__field input__field--isao" type="text" id="input-38">
-              <label class="input__label input__label--isao" for="input-38">
-                            <span class="input__label-content input__label-content--isao"></span>
-                        </label>
-                        <a id="addcommentbutton" type="button" class="btn btn-primary btn-block ladda-button" title=""
-                             data-style="expand-right" data-original-title="评论">
-                        <span class="ladda-label">
-                          提交评论
-                        </span>
-                        </a>
+                      <p>任何一个时代，既具有繁花似锦的光明面，同样也具有污浊不堪的阴暗面。我们生活的世界，就是光明与阴暗交织的战场。有良知的作家，能够刺破浮夸的生活表象下隐藏的鲜血淋漓的真实，以反思和悲悯之心唤起读者心中的共鸣。</p>
+
+                      <div class="ds-comment-footer">
+                          <span class="ds-time" datetime="2016-01-28T20:13:29+08:00" title="2016年1月28日 下午8:13:29">2016年5月10日</span>&nbsp;
+                          <a>
+                              <span class="glyphicon glyphicon-heart-empty" aria-hidden="true" id="like2"></span> 赞
+                          </a>
+                      </div>
+                  </div>
+              </li>
+          <hr/>
+          <div class="form-group">
+            <span class="input input--isao">
+            <input placeholder="评论内容" class="input__field input__field--isao" type="text" id="input-38">
+            <label class="input__label input__label--isao" for="input-38">
+                          <span class="input__label-content input__label-content--isao"></span>
+                      </label>
+                      <a id="addcommentbutton" type="button" class="btn btn-primary btn-block ladda-button" title=""
+                           data-style="expand-right" data-original-title="评论">
+                      <span class="ladda-label">
+                        提交评论
+                      </span>
+                      </a>
             </span>
-            </div>
-
-        </div>
-
-        <div class="col-md-3"></div>
+          </div>
       </div>
 
+      <div class="col-md-3"></div>
+  
 
 
-
+    <div class="col-md-12">
       <nav aria-label="...">
-          <ul class="pagination">
-            <li class="disabled">
-              <span>
-                <span aria-hidden="true">&laquo;</span>
-              </span>
-            </li>
-            <li class="active">
-              <span>1 <span class="sr-only">(current)</span></span>
-            </li>
-            <li>
-              <a href="#">2 <span class="sr-only"></span></a>
-            </li>
-            <li>
-              <a href="#">3 <span class="sr-only"></span></a>
-            </li>
-            <li>
-              <a href="#">4 <span class="sr-only"></span></a>
-            </li>
-            <li>
-              <a href="#">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
+        <ul class="pagination">
+          <li class="disabled">
+            <span>
+              <span aria-hidden="true">&laquo;</span>
+            </span>
+          </li>
+          <li class="active">
+            <span>1 <span class="sr-only">(current)</span></span>
+          </li>
+          <li>
+            <a href="#">2 <span class="sr-only"></span></a>
+          </li>
+          <li>
+            <a href="#">3 <span class="sr-only"></span></a>
+          </li>
+          <li>
+            <a href="#">4 <span class="sr-only"></span></a>
+          </li>
+          <li>
+            <a href="#">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
       </nav>
-<!--       <textarea class="form-control" rows="3"></textarea>
-          <p><a class="btn btn-primary" href="#" role="button" align="right">发表</a></p> -->
       <hr>
       <footer style="padding: 30px 0;">
         <p>&copy; OOAD Team Nine 2017</p>
-      </footer>
+      </footer>      
     </div> 
+
+  </div> 
           
 
   
