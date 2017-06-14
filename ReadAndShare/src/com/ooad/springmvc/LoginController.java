@@ -1,8 +1,7 @@
 package com.ooad.springmvc;
 
-import java.io.IOException;
-
-import javax.servlet.http.HttpServletResponse;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -10,12 +9,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.web.servlet.mvc.support.RedirectAttributesModelMap;
 
 import model.LoginUser;
-import model.RegisterUser;
+import util.DBConnection;
 import util.LoginStatus;
 
 @Controller
@@ -43,6 +40,23 @@ public class LoginController{
 	   
 	   // TODO: read from Table User
 	   // TODO: set result
+	   DBConnection.connSQL();
+	   String select = "select * from user where phone_num='" + phoneNumber + "'";
+	   ResultSet resultSet = DBConnection.selectSQL(select);
+	   try {
+		   if(!resultSet.next()){
+			   result = false;
+		   }else{
+			   if(resultSet.getString("password").equals(password)){
+				   result = true;
+			   }else{
+				   result = false;
+			   }
+		   }
+	   } catch (SQLException e) {
+		   // TODO Auto-generated catch block
+		   e.printStackTrace();
+	   }
 	   
 	   if (result) {
 		   
@@ -54,6 +68,7 @@ public class LoginController{
 		   
 		   // TODO: check if this user's tag list is null
 		   // TODO: set firstTimeLogin
+		   
 		   
 		   if (firstTimeLogin)	return "redirect:tags";
 		   else return "redirect:home";
