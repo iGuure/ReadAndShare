@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,12 +24,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Read & Share</a>
+        	<a class="navbar-brand" href="/ReadAndShare/home">Read & Share</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">我的书房</a></li>
-            <li><a href="#">个人设置</a></li>
+	          <li><a href="/ReadAndShare/bookShelf?phoneNumber=${phoneNumber}">我的书房</a></li>
+	          <li><a href="/ReadAndShare/setting">个人设置</a></li>
+			  <li><a href="/ReadAndShare/unregister">注销</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search">

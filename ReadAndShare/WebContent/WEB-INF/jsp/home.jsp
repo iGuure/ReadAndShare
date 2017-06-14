@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,15 +23,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Read & Share</a>
+        <a class="navbar-brand" href="/ReadAndShare/home">Read & Share</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">我的书房</a></li>
-          <li><a href="#">个人设置</a></li>
+          <li><a href="/ReadAndShare/bookShelf?phoneNumber=${phoneNumber}">我的书房</a></li>
+          <li><a href="/ReadAndShare/setting">个人设置</a></li>
+		  <li><a href="/ReadAndShare/unregister">注销</a></li>
         </ul>
         <form class="navbar-form navbar-right">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control searchInput" placeholder="Search">
         </form>
       </div>
     </div>
@@ -46,7 +48,7 @@
         </p>
 
         <div class="jumbotron">
-          <h1>专题/公告/欢迎信息</h1>
+          <h1>欢迎回来，用户9527</h1>
           <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
         </div>
 
@@ -61,7 +63,7 @@
             <div class="thumbnail recThumbnail">
               <img src="res/img/book1.jpg" style="height: 200px; padding-top: 9px;">
               <div class="caption recCaption">
-                <a href="#"><strong>冰下的人</strong></a>
+                <a href="/ReadAndShare/bookWiki?isbn=123456"><strong>冰下的人</strong></a>
                 <p>侯磊</p>
               </div>
             </div>
@@ -198,7 +200,7 @@
         <p>我的书友</p>
         <div class="list-group">
 
-          <a href="#" class="list-group-item">
+          <a href="/ReadAndShare/bookShelf?phoneNumber=13000000000" class="list-group-item">
             <div class="row">
               <div class="col-xs-6 col-md-4">
                 <img src="res/img/friend.jpg" class="img-rounded img-responsive">
@@ -210,7 +212,7 @@
             </div>
           </a>
 
-          <a href="#" class="list-group-item">
+          <a href="/ReadAndShare/bookShelf?phoneNumber=13000000001" class="list-group-item">
             <div class="row">
               <div class="col-xs-6 col-md-4">
                 <img src="res/img/friend2.jpg" class="img-rounded img-responsive">
@@ -236,8 +238,9 @@
     </footer>
   </div> 
 
-  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
 </body>
 </html>

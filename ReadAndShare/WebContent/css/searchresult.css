@@ -71,14 +71,8 @@ footer {
   margin-bottom: 0;
 }
 
-/* ranking.html */
-
 .ranking {
-  padding-right: 500px;
-}
-.ranking2 {
-  float: right;
-  padding-left: 1000px;
+  padding: 20px;
 }
 
 .rankBook {
@@ -94,6 +88,4 @@ footer {
 .rankingContent {
   padding: 10px;
   margin: 0;
-
 }
-.p1{float: right;}

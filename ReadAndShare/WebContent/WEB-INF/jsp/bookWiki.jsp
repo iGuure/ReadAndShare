@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,12 +47,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Read & Share</a>
+        <a class="navbar-brand" href="/ReadAndShare/home">Read & Share</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">我的书房</a></li>
-        <li><a href="#">个人设置</a></li>
+          <li><a href="/ReadAndShare/bookShelf?phoneNumber=${phoneNumber}">我的书房</a></li>
+          <li><a href="/ReadAndShare/setting">个人设置</a></li>
+		  <li><a href="/ReadAndShare/unregister">注销</a></li>
       </ul>
       <form class="navbar-form navbar-right">
         <input type="text" class="form-control" placeholder="Search">
@@ -211,7 +213,7 @@
                         </a>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">风往北吹</h4>
+                        <h4 class="media-heading"><a href="/ReadAndShare/bookShelf?phoneNumber=13000000000">风往北吹</a></h4>
 
                         <p>阿加莎•克里斯蒂在二战后怀念起她曾去过的叙利亚时说，“我爱那片平静肥沃的土地和土地上纯朴的人们，他们知道如何大笑和享受生活，他们悠闲快活，他们有尊严、有礼貌、有幽默细胞，且不畏死亡。”而与曾经的乐土叙利亚同为阿拉伯国家的伊拉克，更是世界奇迹巴比伦空中花园...</p>
 

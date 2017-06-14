@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,6 @@
 	<title>用户中心</title>
 
 	<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/tags.css">
 </head>
 <body>
 
@@ -165,10 +165,9 @@
 
         <div class="col-md-10 col-md-offset-1">
           <br><br><br>
-          <button type="button" btn-lg class="btn btn-success center" active id="finishSelect"
-           style="background:gray;color:white">完成选择</button>
+          <a href="/ReadAndShare/updateTags"><button type="button" class="btn btn-lg btn-success center" active id="finishSelect">完成选择</button></a>
           <br><br><br>
-        </div>  
+        </div>
 
     </div>
     

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,9 +21,9 @@
 				<h3 class="registerTitle">用户注册</h3>
 			</div>
 			<div class="panel-body registerBody">
-				<form>
+				<form:form method="POST" action="/ReadAndShare/registerUser">
 					<div class="form-group">
-						<input type="tel" class="form-control input-lg" id="inputPhoneNumber" placeholder="您的手机号码" pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$" required>
+						<input name="phoneNumber" type="tel" class="form-control input-lg" id="inputPhoneNumber" placeholder="您的手机号码" pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$" required>
 					</div>
 					<div class="input-group form-group">
 						<input type="text" class="form-control input-lg" id="inputCaptcha" placeholder="您的验证码" required>
@@ -31,15 +32,15 @@
 						</span>
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control input-lg" id="inputPassword" placeholder="您的密码" required>
+						<input name="password1" type="password" class="form-control input-lg" id="inputPassword" placeholder="您的密码" required>
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control input-lg" id="repeatPassword" placeholder="重复密码" required>
+						<input name="password2" type="password" class="form-control input-lg" id="repeatPassword" placeholder="重复密码" required>
 					</div>
 					<div class="form-group" id="registerButton">
 						<button type="submit" class="btn btn-primary btn-lg btn-block">注册</button>
 					</div>
-				</form>
+				</form:form>
 			</div>
 		</div>
 
