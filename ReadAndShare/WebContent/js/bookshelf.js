@@ -24,7 +24,9 @@ $(".closeLayer").click(removeElement);
 $(".closeTab").click(removeElement);
 $("#new").click(function() {
 	$(this).hide();
-     var newInput = $('<li><input type="text" class="form-control input" id="input"></li>')
+     var newInput = $('<li><input type="text" class="form-control input" id="input"></li>');
+     var content = $("#input").val();
+     alert(content);
 	 $("#bookTab").children(":last").before(newInput);
      
 	 $(".input").keydown(function(e) {
