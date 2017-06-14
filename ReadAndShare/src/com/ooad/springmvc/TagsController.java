@@ -29,12 +29,23 @@ public class TagsController {
 	   public String updateTags(ModelMap model) {
 
 		   // TODO: update tags
-		   
+		   String insertSql1 = "insert into tag(tag_type,tag_name) values('文学','小说')";
+		   String insertSql2 = "insert into user_tag(user_account,tag_name) values('"+loginStatus.getUserPhoneNumber()+"','"+"小说')";
+		   String insertSql3 = "insert into tag(tag_type,tag_name) values('流行','漫画')";
+		   String insertSql4 = "insert into user_tag(user_account,tag_name) values('"+loginStatus.getUserPhoneNumber()+"','漫画')";
+		   String insertSql5 = "insert into tag(tag_type,tag_name) values('科技','互联网')";
+		   String insertSql6 = "insert into user_tag(user_account,tag_name) values('"+loginStatus.getUserPhoneNumber()+"','"+"互联网')";
 //		   DBConnection.connSQL();
 //		   String insertSql = "insert into tag(tag_name"
 //		   		+ ") values('madiao')";
 //		   Boolean resultSet = DBConnection.insertSQL(insertSql);
 //		   System.out.println("updating"+resultSet);
+		   DBConnection.insertSQL(insertSql1);
+		   DBConnection.insertSQL(insertSql2);
+		   DBConnection.insertSQL(insertSql3);
+		   DBConnection.insertSQL(insertSql4);
+		   DBConnection.insertSQL(insertSql5);
+		   DBConnection.insertSQL(insertSql6);
 		   
 		   return "redirect:home";
 		   

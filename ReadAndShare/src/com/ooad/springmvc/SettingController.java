@@ -1,5 +1,8 @@
 package com.ooad.springmvc;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -7,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import model.ChangePassword;
 import model.LoginUser;
 import model.SettingUser;
 import util.DBConnection;
@@ -49,6 +53,50 @@ public class SettingController {
 			   + ", major='" + major + "'"
 			   + ", bio='" + bio + "'"
 			   + "where account='" + account + "'";
+	   DBConnection.updateSQL(update);
+	   DBConnection.deconnSQL();
+
+	   return "redirect:setting";
+   }
+   
+   @RequestMapping(value = "/changePassword", method = RequestMethod.POST)
+   public String changePassword(@ModelAttribute("SpringWeb")ChangePassword changePassword, RedirectAttributes redirectAttributes) {
+	   String account = LoginStatus.getInstance().getUserPhoneNumber(); 
+
+	   String oldPassword = changePassword.getOldPassword();
+	   String newPassword1 = changePassword.getNewPassword1();
+	   String newPassword2 = changePassword.getNewPassword2();
+	   
+	   if(!newPassword1.equals(newPassword2)){
+		   System.out.println("两次密码不相等");
+		   return "redirect:setting";
+	   }
+	   
+	   DBConnection.connSQL();
+	   
+	   String select = "select * from user where account='" + account + "'";
+	   ResultSet resultSet = DBConnection.selectSQL(select);
+	   try {
+		   if(!resultSet.next()){
+			   System.out.println("没有找到账号");
+			   return "redirect:setting";
+		   }else{
+			   if(!resultSet.getString("password").equals(oldPassword)){
+				   System.out.println("旧密码不相等");
+				   return "redirect:setting";
+			   }
+		   }
+	   } catch (SQLException e) {
+		   // TODO Auto-generated catch block
+		   e.printStackTrace();
+	   }
+	   DBConnection.deconnSQL();
+	   
+	   
+	   DBConnection.connSQL();
+	   String update = "update user set password='" + newPassword1 + "'"
+			   + "where account='" + account + "'";
+	   System.out.println("写入新密码");
 	   DBConnection.updateSQL(update);
 	   DBConnection.deconnSQL();
 
