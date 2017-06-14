@@ -12,9 +12,9 @@ public class DBConnection {
 	  
     // connect to MySQL  
     public static void connSQL() {  
-        String url = "jdbc:mysql://localhost:3307/test?characterEncoding=UTF-8";  
-        String username = "test";  
-        String password = "123456"; // 加载驱动程序以连接<a href="http://lib.csdn.net/base/mysql" class='replace_word' title="MySQL知识库" target='_blank' style='color:#df3434; font-weight:bold;'>数据库</a>   
+        String url = "jdbc:mysql://localhost:3306/users?characterEncoding=UTF-8";  
+        String username = "root";  
+        String password = "951120"; // 加载驱动程序以连接<a href="http://lib.csdn.net/base/mysql" class='replace_word' title="MySQL知识库" target='_blank' style='color:#df3434; font-weight:bold;'>数据库</a>   
         try {   
             Class.forName("com.mysql.jdbc.Driver" );   
             conn = (Connection) DriverManager.getConnection( url,username, password );
