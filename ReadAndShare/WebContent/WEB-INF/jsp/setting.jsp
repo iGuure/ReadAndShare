@@ -33,7 +33,12 @@
 			  <li><a href="/ReadAndShare/unregister">注销</a></li>
           </ul>
           <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search">
+		    <div class="input-group">
+		      <input type="text" class="form-control" placeholder="Search for..." id="searchContent">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button" id="searchButton">Go</button>
+		      </span>
+		    </div><!-- /input-group -->
           </form>
         </div>
       </div>
@@ -73,54 +78,54 @@
               <h3 class="panel-title">个人信息</h3>
             </div>
             <div class="panel-body">
-              <form class="form-horizontal">
+              <form:form method="POST" action="/ReadAndShare/settingUser" class="form-horizontal">
                 <div class="form-group">
                   <label for="inputName" class="col-md-2 control-label">昵称/Name</label>
                   <div class="col-md-10">
-                    <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+                    <input name="name" type="text" class="form-control" id="inputName" placeholder="Name" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-md-2 control-label">性别/Gender</label>
                   <div class="col-md-10">
                     <label class="radio-inline">
-                      <input type="radio" name="inputGender" id="inputGenderBoy" value="option1"> 男
+                      <input type="radio" name="inputGender" id="inputGenderBoy" value="男"> 男
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="inputGender" id="inputGenderGirl" value="option2"> 女
+                      <input type="radio" name="inputGender" id="inputGenderGirl" value="女"> 女
                     </label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputEmail" class="col-md-2 control-label">邮箱/Email</label>
                   <div class="col-md-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputWeChat" class="col-md-2 control-label">微信/WeChat</label>
                   <div class="col-md-4">
-                    <input type="text" class="form-control" id="inputWeChat" placeholder="WeChat">
+                    <input name="we_chat" type="text" class="form-control" id="inputWeChat" placeholder="WeChat">
                   </div>
                   <label for="inputQQ" class="col-md-2 control-label">QQ</label>
                   <div class="col-md-4">
-                    <input type="tel" class="form-control" id="inputQQ" placeholder="QQ" pattern="[1-9][0-9]{4,14}">
+                    <input name="qq" type="tel" class="form-control" id="inputQQ" placeholder="QQ" pattern="[1-9][0-9]{4,14}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputSchool" class="col-md-2 control-label">学校/School</label>
                   <div class="col-md-4">
-                    <input type="text" class="form-control" id="inputSchool" placeholder="School">
+                    <input name="school" type="text" class="form-control" id="inputSchool" placeholder="School">
                   </div>
                   <label for="inputMajor" class="col-md-2 control-label">专业/Major</label>
                   <div class="col-md-4">
-                    <input type="text" class="form-control" id="inputMajor" placeholder="Major">
+                    <input name="major" type="text" class="form-control" id="inputMajor" placeholder="Major">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputBio" class="col-md-2 control-label">个人简介/Bio</label>
                   <div class="col-md-10">
-                    <textarea class="form-control" rows="5" id="inputBio" placeholder="Tell a little about yourself"></textarea>
+                    <textarea name="bio" class="form-control" rows="5" id="inputBio" placeholder="Tell a little about yourself"></textarea>
                   </div>
                 </div>
                 <div class="form-group">
@@ -129,7 +134,7 @@
                     <button type="reset" class="btn btn-default">重置</button>
                   </div>
                 </div>
-              </form>
+              </form:form>
             </div>
           </div>
         </div>
@@ -213,5 +218,6 @@
   <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/setting.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
 </body>
 </html>

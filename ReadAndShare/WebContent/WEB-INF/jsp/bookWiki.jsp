@@ -56,7 +56,12 @@
 		  <li><a href="/ReadAndShare/unregister">注销</a></li>
       </ul>
       <form class="navbar-form navbar-right">
-        <input type="text" class="form-control" placeholder="Search">
+		    <div class="input-group">
+		      <input type="text" class="form-control" placeholder="Search for..." id="searchContent">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button" id="searchButton">Go</button>
+		      </span>
+		    </div><!-- /input-group -->
       </form>
       </div>
     </div>
@@ -313,5 +318,6 @@
 	<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
 
   <script type="text/javascript" src="js/bookwiki.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
 </body>
 </html>

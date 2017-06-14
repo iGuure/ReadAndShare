@@ -1,10 +1,14 @@
 $(document).ready(function() {
 	
-	$(".searchInput").keydown(function(event) {
+	$("#searchButton").click(function() {
+		var content = $("#searchContent").val();
+		var url = "searchResult?content=" + content;
+		window.location.href = url;
+	});
+	
+	$("#searchContent").keydown(function(event) {
 		if (event.keyCode == 13) {
-			var content = $(this).val();
-			var url = "/ReadAndShare/searchResult?content=" + content;
-			$('<a href="' + url + '"></a>').click();
+			return false;
 		}
 	})
 	
