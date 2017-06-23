@@ -1,5 +1,8 @@
 package com.ooad.springmvc;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,13 +34,14 @@ public class TagsController {
 	   @RequestMapping(value = "/updateTags", method = RequestMethod.GET)
 	   public String updateTags(ModelMap model) {
 
-		   // TODO: update tags
-		   String insertSql1 = "insert into tag(tag_type,tag_name) values('ÎÄÑ§','Ð¡Ëµ')";
+
+	   
+		   String insertSql1 = "insert into tag(tag_type,tag_name) values('ï¿½ï¿½Ñ§','Ð¡Ëµ')";
 		   String insertSql2 = "insert into user_tag(user_account,tag_name) values('"+loginStatus.getUserPhoneNumber()+"','"+"Ð¡Ëµ')";
-		   String insertSql3 = "insert into tag(tag_type,tag_name) values('Á÷ÐÐ','Âþ»­')";
-		   String insertSql4 = "insert into user_tag(user_account,tag_name) values('"+loginStatus.getUserPhoneNumber()+"','Âþ»­')";
-		   String insertSql5 = "insert into tag(tag_type,tag_name) values('¿Æ¼¼','»¥ÁªÍø')";
-		   String insertSql6 = "insert into user_tag(user_account,tag_name) values('"+loginStatus.getUserPhoneNumber()+"','"+"»¥ÁªÍø')";
+		   String insertSql3 = "insert into tag(tag_type,tag_name) values('ï¿½ï¿½ï¿½ï¿½','ï¿½ï¿½ï¿½ï¿½')";
+		   String insertSql4 = "insert into user_tag(user_account,tag_name) values('"+loginStatus.getUserPhoneNumber()+"','ï¿½ï¿½ï¿½ï¿½')";
+		   String insertSql5 = "insert into tag(tag_type,tag_name) values('ï¿½Æ¼ï¿½','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½')";
+		   String insertSql6 = "insert into user_tag(user_account,tag_name) values('"+loginStatus.getUserPhoneNumber()+"','"+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½')";
 //		   DBConnection.connSQL();
 //		   String insertSql = "insert into tag(tag_name"
 //		   		+ ") values('madiao')";

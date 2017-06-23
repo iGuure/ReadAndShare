@@ -81,7 +81,7 @@
 					<ul class="nav navbar-default  nav-stacked booklist"
 						role="navigation">
 						<li role="presentation" class="active "><a class="bookitem"
-							href="friendsBookshelf.html?id=林炯程">林炯程</a></li>
+							href="friendsBookshelf?id=林炯程">林炯程</a></li>
 						<li role="presentation"><a class="bookitem" href="friendsBookshelf.html?id=马乙凯">马乙凯</a></li>
 
 					</ul>
